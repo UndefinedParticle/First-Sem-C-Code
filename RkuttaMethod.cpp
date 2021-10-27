@@ -1,14 +1,20 @@
 #include<iostream>
 #include<cmath>
 using namespace std;
+
+// use f function for 1st order equ.
+
 float f(float x,float y){
-    return x+y;
+    return 2+sqrt(x*y);
 }
+
+// please use f1 and g function for 2nd order equ.
+
 float f1(float t,float x,float z){
-    return z;
+    return z+x*x;
 }
 float g(float t,float x,float z){
-    return 6*cos(t)-x;
+    return y+x*x;
 }
 int main(){
     cout<<"Order of the main equation => ";int o;cin>>o;cout<<endl;

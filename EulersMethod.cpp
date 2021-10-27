@@ -1,9 +1,10 @@
 #include<iostream>
 #include<iomanip>
+#include<cmath>
 using namespace std;
 
 float f(float x,float y){
-    return x-y;
+    return 200*log(1+x)-x;
 }
 
 int main(){
