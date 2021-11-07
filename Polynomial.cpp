@@ -26,7 +26,9 @@ void myPoly(Node *&head){
                 temp=temp->next;
             }
             temp->next=newNode;
-        }
+        }cout<<"newNode is "<<&newNode<<endl;
+        cout<<"coeff is "<<&newNode->coeff<<endl;
+        
     }
 }
 
