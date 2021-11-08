@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<iomanip>
 using namespace std;
 
 float U(float x,float y){
@@ -155,7 +156,7 @@ int main(){
                             continue;
                         }else{
                             u[i][j][0]=(u[i-1][j][0]+u[i+1][j][0]+u[i][j+1][0]+u[i][j-1][0])/4;
-                            cout<<"u["<<i<<"]["<<j<<"][0] = "<<u[i][j][0]<<"  ";
+                            cout<<"u["<<i<<"]["<<j<<"][0] = "<<fixed<<setprecision(2)<<u[i][j][0]<<"  ";
                         }
                     }cout<<endl;
                 }cout<<endl;
@@ -165,7 +166,7 @@ int main(){
                     for(int j=y2-1;j>y1;j=j-ly){
                         for(int i=x1+1;i<x2;i=i+lx){
                             u[i][j][k+1]=(u[i-1][j][k+1]+u[i+1][j][k]+u[i][j+1][k+1]+u[i][j-1][k])/4;
-                            cout<<"u["<<i<<"]["<<j<<"]["<<k<<"] = "<<u[i][j][k]<<"  ";
+                            cout<<"u["<<i<<"]["<<j<<"]["<<k<<"] = "<<fixed<<setprecision(2)<<u[i][j][k]<<"  ";
                         }cout<<endl;
                     }cout<<endl;cout<<endl;
                 }
