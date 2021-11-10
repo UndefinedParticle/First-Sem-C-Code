@@ -24,6 +24,9 @@ void push(stack* &head,int newData){
 }
 
 void pop(stack* &head){
+    if(top==NULL){
+        cout<<"Underflow\n";
+    }
     top=head->next;
     head=head->next;
 }
@@ -34,7 +37,7 @@ bool isEmpty(stack* &head){
 
 int peek(stack* &head){
     if(top==NULL){
-        cout<<"UnderFlow\n";
+        cout<<"There is no element.\n";
         return -1;
     }return top->data;
 }
@@ -67,17 +70,18 @@ int main(){
     push(st,1);
     push(st,2);
     push(st,3);
-    push(st,4);
+    /*push(st,4);
     push(st,5);
     push(st,6);
     push(st,7);
     push(st,8);
-    push(st,9);
+    push(st,9);*/
     cout<<size(st)<<endl;
     show(st);
     pop(st);cout<<peek(st)<<endl;
     pop(st);cout<<peek(st)<<endl;
     pop(st);cout<<peek(st)<<endl;
+    pop(st);//cout<<peek(st)<<endl;
 
     /*cout<<isEmpty(st)<<endl;;
     push(st,4);
