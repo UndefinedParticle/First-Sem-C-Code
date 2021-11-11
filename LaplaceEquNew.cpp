@@ -3,20 +3,16 @@
 #include<iomanip>
 using namespace std;
 int main(){
-    //cout<<"Lower bound of  x => ";
-    int x1;x1=0;
-    //cin>>x1;cout<<endl;
-    cout<<"Enter Boundary Point(x=y) => ";
+    cout<<"Lower bound of  x => ";
+    int x1;cin>>x1;cout<<endl;
+    cout<<"Upper bound of  x => ";
     int x2;cin>>x2;cout<<endl;
-    //cout<<"Lower bound of  y => ";
-    int y1;y1=0;
-    //cin>>y1;cout<<endl;
-    //cout<<"Upper bound of  y => ";
-    int y2;y2=x2;
-    //cin>>y2;cout<<endl;
-    cout<<"Enter Mesh-Length => ";int lx;cin>>lx;cout<<endl;
-    int ly=lx;
-    //cout<<"Step length for Y-axix => ";int ly;cin>>ly;cout<<endl;
+    cout<<"Lower bound of  y => ";
+    int y1;cin>>y1;cout<<endl;
+    cout<<"Upper bound of  y => ";
+    int y2;cin>>y2;cout<<endl;
+    cout<<"Step(Mesh) length for X-axix => ";int lx;cin>>lx;cout<<endl;
+    cout<<"Step(Mesh) length for Y-axix => ";int ly;cin>>ly;cout<<endl;
     cout<<"Number of iteration => ";int ita;cin>>ita;cout<<endl;
     int n=max(x2,y2);float u[n+1][n+1][ita+2];//u[i][j][k] where k is the number of iteration 
                                             // and k=0 means it is in initial stage.
