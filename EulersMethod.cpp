@@ -4,7 +4,7 @@
 using namespace std;
 
 float f(float x,float y){
-    return 200*log(1+x)-x;
+    return x-y;
 }
 
 int main(){

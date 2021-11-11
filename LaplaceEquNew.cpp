@@ -3,17 +3,21 @@
 #include<iomanip>
 using namespace std;
 int main(){
-    cout<<"Lower bound of  x => ";
-    int x1;cin>>x1;cout<<endl;
-    cout<<"Upper bound of  x => ";
+    //cout<<"Lower bound of  x => ";
+    int x1;x1=0;
+    //cin>>x1;cout<<endl;
+    cout<<"Enter Boundary Point(x=y) => ";
     int x2;cin>>x2;cout<<endl;
-    cout<<"Lower bound of  y => ";
-    int y1;cin>>y1;cout<<endl;
-    cout<<"Upper bound of  y => ";
-    int y2;cin>>y2;cout<<endl;
+    //cout<<"Lower bound of  y => ";
+    int y1;y1=0;
+    //cin>>y1;cout<<endl;
+    //cout<<"Upper bound of  y => ";
+    int y2;y2=x2;
+    //cin>>y2;cout<<endl;
+    cout<<"Enter Mesh-Length => ";int lx;cin>>lx;cout<<endl;
+    int ly=lx;
+    //cout<<"Step length for Y-axix => ";int ly;cin>>ly;cout<<endl;
     cout<<"Number of iteration => ";int ita;cin>>ita;cout<<endl;
-    cout<<"Step length for X-axix => ";int lx;cin>>lx;cout<<endl;
-    cout<<"Step length for Y-axix => ";int ly;cin>>ly;cout<<endl;
     int n=max(x2,y2);float u[n+1][n+1][ita+2];//u[i][j][k] where k is the number of iteration 
                                             // and k=0 means it is in initial stage.
     for(int i=y1;i<=x2;i=i+lx){              
@@ -100,11 +104,11 @@ int main(){
 
     //Gauss-Seidal Method
     for(int k=0;k<ita;k++){
-        cout<<"Iteration "<<k+1<<endl;
+        cout<<"Iteration "<<k+1<<endl; cout<<endl;
         for(int j=y2-1;j>y1;j=j-ly){
             for(int i=x1+1;i<x2;i=i+lx){
                 u[i][j][k+1]=(u[i-1][j][k+1]+u[i+1][j][k]+u[i][j+1][k+1]+u[i][j-1][k])/4;
-                cout<<"u["<<i<<"]["<<j<<"]["<<k<<"] = "<<fixed<<setprecision(2)<<u[i][j][k]<<"  ";
+                cout<<"u["<<i<<"]["<<j<<"]["<<k+1<<"] = "<<fixed<<setprecision(2)<<u[i][j][k]<<"  ";
                 }cout<<endl;
             }cout<<endl;cout<<endl;
         }
