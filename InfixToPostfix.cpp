@@ -143,8 +143,8 @@ float PostEvaluation(string s){
 int main(){
     cout<<"Enter Your Infix Expression without giving any space => ";
     string Q;cin>>Q;cout<<endl;
-    cout<<"Postfix Expression is => "<<PostEvaluation(PolishExp(Q))<<endl;
-
+    cout<<"Postfix Expression is => "<<PolishExp(Q)<<endl;
+    cout<<"Postfix Expression is => "<<PostEvaluation(PolishExp(Q))<<endl; //This line only for integer type of string input
     return 0;
 }
 //a+(b*c-(d/e^f)*g)*h
