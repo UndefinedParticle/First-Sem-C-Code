@@ -107,45 +107,10 @@ string PolishExp(string s){
     return P;
 }
 
-float PostEvaluation(string s){
-    stack* head=NULL;
-    for(float i=0;i<s.length();i++){
-        if('0'<=s[i]&&s[i]<='9'){
-            float num=s[i]-'0';
-            push(head,num);
-        }else{
-            float o1=peek(head);pop(head);
-            float o2=peek(head);pop(head);
-            switch(s[i]){
-                case '+':
-                    push(head,o2+o1);
-                    break;
-                case '-':
-                    push(head,o2-o1);
-                    break;
-                case '/':
-                    push(head,o2/o1);
-                    break;
-                case '*':
-                    push(head,o2*o1);
-                    break;
-                case '^':
-                    push(head,pow(o2,o1));
-                    break;
-            }
-        }
-    }
-    
-    return peek(head);
-
-}
 
 int main(){
     cout<<"Enter Your Infix Expression without giving any space => ";
-    string Q;cin>>Q;cout<<endl;
-    cout<<"Postfix Expression is => "<<PolishExp(Q)<<endl;
-    //cout<<"Postfix Expression is => "<<PostEvaluation(PolishExp(Q))<<endl; //This line only for integer type of string input
+    string Q;cin>>Q;cout<<endl;//(1+2)*3-(4-5)*(6+7)
+    cout<<"Postfix Expression is => "<<PolishExp(Q)<<endl;//12+3*45-67+*-
     return 0;
 }
-//a+(b*c-(d/e^f)*g)*h
-//precedence(s[i])>precedence(peek(head))

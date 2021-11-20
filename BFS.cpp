@@ -67,13 +67,14 @@ int main(){
 
     for(int i=0;i<n;i++){
         visited[i]=0;
-    }int a[n][n];
-    cout<<"Enter the values of the adjancy matrix => ";cout<<endl;
+    }//int a[7][7]={{0,1,1,1,0,0,0},{1,0,1,0,0,0,0},{1,1,0,1,1,0,0},{1,0,1,0,1,0,0},{0,0,1,1,0,1,1},{0,0,0,0,1,0,0},{0,0,0,0,1,0,0}};
+    
+    /*cout<<"Enter the values of the adjancy matrix => ";cout<<endl;
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
             cin>>a[i][j];
         }
-    }cout<<"Ans is => \n";
+    }*/cout<<"Ans is => \n";
     cout<<p<<" ";
     visited[0]=1;
     q.enQueue(p);
