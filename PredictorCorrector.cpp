@@ -2,7 +2,7 @@
 #include<cmath>
 using namespace std;
 float F(float x,float y){
-    return x*x+y*y;
+    return 1/(x+y);
 }
 int main(){
 

@@ -9,10 +9,11 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
-    int min;
+    int min,min1;
     cout<<"-----Internal process-----\n";
     for(int i=0;i<n-1;i++) {
-        min=i;
+        
+        min=i;min1=min;
 			for(int j=i;j<n;j++) {
 
 				if(a[min]>a[j]) {
@@ -20,6 +21,9 @@ int main(){
 				}
 
 			}
+            if(min==min1){
+                continue;
+            }
           int temp=a[i];
            a[i]=a[min];
            a[min]=temp;

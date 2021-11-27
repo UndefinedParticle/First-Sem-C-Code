@@ -4,7 +4,7 @@
 #include<cmath>
 using namespace std;
 float f(float x){
-    return 1/(1+x*x);
+    return 1/(1+x);
 }
 int main(){
     float a,b,n;

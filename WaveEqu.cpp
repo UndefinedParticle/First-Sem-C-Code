@@ -8,7 +8,7 @@ float U(float x,float t){
     else if(x==5)
         return 0;
     else if(t==0)
-        return (x*x*(5-x));
+        return (x*(5-x));
     else 
         return -1;
 }

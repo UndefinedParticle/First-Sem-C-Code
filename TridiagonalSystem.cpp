@@ -65,13 +65,15 @@ int main(){
 		for(int i=1;i<n;i++) {
 			alpha[i]=b[i]-((a[i]*c[i-1])/alpha[i-1]);
 		}
-		/*for(int i=0;i<n;i++)
-			printf("%f \n",alpha[i]);*/
+		for(int i=0;i<n;i++)
+			printf("alpha-%d is %f \n",i+1,alpha[i]);
 
 
 		for(int i=1;i<n;i++) {
 			beta[i]=((d[i]-(a[i]*beta[i-1]))/alpha[i]);
 		}
+		for(int i=0;i<n;i++)
+			printf("beta-%d is %f \n",i+1,beta[i]);
 		x[n-1]=beta[n-1];
 		for(int i=n-2;i>=0;i--) {
 			x[i]=beta[i]-((c[i]*x[i+1])/alpha[i]);

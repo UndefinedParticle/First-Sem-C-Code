@@ -42,7 +42,7 @@ int main(){
         cin>>arr[i];
     }
     radixSort(arr,n);
-    cout<<"The sorted array is => \n";
+    cout<<"\n The sorted array is => \n";
     printArray(arr,n);
     return 0;
 }

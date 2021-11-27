@@ -101,7 +101,7 @@ string PolishExp(string s){
                    break;
                 }
             }
-        }
+        }//show(head);
     }
     //cout<<"Postfix Expression is => "<<P<<endl;
     return P;

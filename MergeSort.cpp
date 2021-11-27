@@ -23,7 +23,7 @@ void mergeArray(int arr[],int first,int mid,int last){
         arr[k]=a[i];
         k++,i++;
     }
-    while(i<n1){
+    while(i<n2){
         arr[k]=b[j];
         k++,j++;
     }

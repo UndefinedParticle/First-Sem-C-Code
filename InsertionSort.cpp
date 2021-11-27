@@ -3,6 +3,7 @@
 using namespace std;
 
 void insertionSort(int a[],int n){
+    
     for(int i=1;i<n;i++){
         int current=a[i];
         int j=i-1;
@@ -11,6 +12,10 @@ void insertionSort(int a[],int n){
             j--;
         }
         a[j+1]=current;
+        cout<<"Step "<<i<<endl;
+        for(int k=0;k<n;k++)
+            cout<<a[k]<<" ";
+        cout<<endl;
     }
 }
 
@@ -24,7 +29,7 @@ int main(){
 
     insertionSort(arr,n);
 
-    cout<<"The sorted array is => \n";
+    cout<<"\n The sorted array is => \n";
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
     }cout<<endl;
